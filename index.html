@@ -4,34 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat&family=Nova+Mono&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 
     <div class="calculator">
-        <input type="text" id="display" readonly>
+        <input type="text" id="display" placeholder="0">
+        <div class="controllers">
+            <button onclick="clearDisplay()" class="btn-clear">
+                <img class="clear-img" src="img/c.svg" alt="#">
+            </button>
+            <button onclick="deleteLastElement()" class="btn-delete">
+                <img class="delete" src="img/delete.svg" alt="#">
+            </button>
+            <button onclick="calculate()" class="btn-calculate">
+                <img class="equal" src="img/equal.svg" alt="#">
+            </button>
+        </div>
         <div class="calculator-buttons">
+            <div class="operators-group">
+                <button onclick="appendToDisplay('/')" class="btn">
+                    <img class="division" src="img/division.svg" alt="#">
+                </button>
+                <button onclick="appendToDisplay('*')" class="btn">
+                    <img class="multiply" src="img/plus.webp" alt="#">
+                </button>
+                <button onclick="appendToDisplay('+')" class="btn">
+                    <img class="plus" src="img/plus.webp" alt="#">
+                </button>
+                <button onclick="appendToDisplay('-')" class="btn">
+                    <img class="minus" src="img/minus.svg" alt="#">
+                </button>
+            </div>
             <div class="numbers-group">
-            <button onclick="appendToDisplay('7')" class="btn">7</button>
-            <button onclick="appendToDisplay('8')" class="btn">8</button>
-            <button onclick="appendToDisplay('9')" class="btn">9</button>
-            <button onclick="appendToDisplay('4')" class="btn">4</button>
-            <button onclick="appendToDisplay('5')" class="btn">5</button>
-            <button onclick="appendToDisplay('6')" class="btn">6</button>
-            <button onclick="appendToDisplay('1')" class="btn">1</button>
-            <button onclick="appendToDisplay('2')" class="btn">2</button>
-            <button onclick="appendToDisplay('3')" class="btn">3</button>
-            <button onclick="appendToDisplay('0')" class="btn">0</button>
-            <button onclick="clearDisplay()" class="btn-clear">C</button>
-            <button onclick="calculate()" class="btn">-></button>
-        </div>
-        <div class="operators-group">
-            <button onclick="appendToDisplay('/')" class="btn">/</button>
-            <button onclick="appendToDisplay('*')" class="btn">*</button>
-            <button onclick="appendToDisplay('+')" class="btn">+</button>
-            <button onclick="appendToDisplay('-')" class="btn">-</button>
-        </div>
+                <button onclick="appendToDisplay('7')" class="btn">
+                    <img class="number" src="img/seven.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('8')" class="btn">
+                    <img class="number" src="img/eight.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('9')" class="btn">
+                    <img class="number" src="img/nine.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('4')" class="btn">
+                    <img class="number" src="img/four.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('5')" class="btn">
+                    <img class="number" src="img/five.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('6')" class="btn">
+                    <img class="number" src="img/six.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('1')" class="btn">
+                    <img class="number" src="img/one.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('2')" class="btn">
+                    <img class="number" src="img/two.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('3')" class="btn">
+                    <img class="number" src="img/three.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('0')" class="btn">
+                    <img class="number" src="img/null.svg" alt="">
+                </button>
+                <button onclick="appendToDisplay('.')" class="btn">
+                    <img class="dot" src="img/dot.svg" alt="">
+                </button>
+            </div>
+            <div class="operators-second-group">
+                <button onclick="appendToDisplay('%')" class="btn">
+                    <img class="percent" src="img/percent.svg" alt="#">
+                </button>
+                <button onclick="appendToDisplay('sqrt(')" class="btn">
+                    <img class="sqrt" src="img/sqrt.svg" alt="#">
+                </button>
+                <button onclick="appendToDisplay('**')" class="btn">
+                    <img class="x-square" src="img/x-square.svg" alt="#">
+                </button>
+            </div>
+            <div class="brackets-group">
+                <button onclick="appendToDisplay('(')" class="btn">
+                    <img class="bracket" src="img/left-bracket.svg" alt="">
+                </button>
+                 <button onclick="appendToDisplay(')')" class="btn">
+                    <img class="bracket" src="img/rigth-bracket.svg" alt="">
+                </button>
+            </div>
         </div>
     </div>
 </body>

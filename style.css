@@ -4,15 +4,22 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #020024;
-background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+error-popup {
+  display: none !important;
 }
 
+
 .calculator {
-    max-width: 300px;
-    margin: 400px auto;
+    max-width: 500px;
+    width: 100%;
+    margin: 150px 525px;
     padding: 10px;
+
+    btn:active,
+    btn:focus-visible {
+        outline: none;
+        border: none;
+    }
     
 
 
@@ -21,46 +28,146 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%,
         height: 10vh;
         margin-bottom: 20px;
         outline: none;
-    }
-
-   
-
-   .calculator-buttons {
-    display: flex;
-    justify-content: space-between;
-
-     .btn-clear {
-        padding: 20px 25px;
-        border-radius: 15%;
+        font-family: "Montserrat";
         border: none;
     }
 
-    .numbers-group {
-        width: 270px;
+    .controllers {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
+        max-width: 66px;
+        position: relative;
+        left: 286px;
+        bottom: 90px;
+        gap: 18px;
 
-        .btn {
+        .btn-clear, 
+        .btn-calculate {
             padding: 20px 25px;
-            border-radius: 15%;
+            border-radius: 50%;
+            border: none;
+        }
+
+        .btn-delete {
+            padding: 15px 20px;
+            border-radius: 50%;
             border: none;
         }
     }
 
-    .operators-group {
-        max-width: 60px;
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        flex-wrap: wrap;
-        padding-left: 6px;
 
-        .btn {
-            padding: 20px 25px;
-            border-radius: 15%;
-            border: none;
+    .calculator-buttons {
+        max-width: 290px;
+        position: relative;
+        bottom: 230px;
+
+
+        .operators-group {
+            max-width: 280px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 8px;
+
+            .btn {
+                padding: 20px 25px;
+                border-radius: 50%;
+                border: none;
+            }
+        }
+
+        .numbers-group {
+            width: 210px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+
+            .btn {
+                padding: 20px 25px;
+                border-radius: 50%;
+                border: none;
+            }
+        }
+        
+
+        .operators-second-group {
+            max-width: 70px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            bottom: 257px;
+            left: 215px;
+            gap: 8px;
+
+            .btn {
+                padding: 20px 25px;
+                border-radius: 50%;
+                border: none;
+            }
+
+            .btn:nth-child(2) {
+                padding: 12px 17px;
+            }
+        }
+
+        .brackets-group {
+            position: relative;
+            bottom: 250px;
+            left: 146px  ;
+
+            .btn {
+                padding: 17px 21px;
+                border-radius: 50%;
+                border: none;
+            }
         }
     }
-   }
+}
+
+
+.plus,
+.division,
+.number,
+.percent,
+.clear-img,
+.x-square {
+    width: 15px;
+    height: 15px;
+}
+
+.multiply {
+    width: 17px;
+    height: 17px;
+    transform: rotate(45deg);
+}
+
+.minus {
+    width: 16px;
+    height: 20px;
+}
+
+.equal {
+    width: 16px;
+    height: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+}
+
+.sqrt {
+    width: 30px;
+    height: 30px;
+}
+
+.bracket {
+    width: 20px;
+    height: 20px;
+}
+
+.delete {
+    width: 25px;
+    height: 25px;
 }
