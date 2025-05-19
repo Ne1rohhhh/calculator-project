@@ -28,9 +28,9 @@ const calculate = () => {
             throw new Error('Invalid characters in expression');
         }
 
-        expression = expression.replace(/(\d+(\.\d+)?)%(\d+(\.\d+)?)/g, '($1 / 100) * $3');
+        expression = expression.replace(/(\d+(\.\d+)?)%(\d+(\.\d+)?)/g);
 
-        expression = expression.replace(/sqrt\(/g, 'Math.sqrt(');
+        expression = expression.replace(/sqrt\(/g);
 
         const result = eval(expression);
         display.value = result;
